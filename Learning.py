@@ -11,4 +11,7 @@ flask run
 
 // fusing a port
 sudo fuser -k xxxx/tcp
+
+// github token
+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
 ''')
