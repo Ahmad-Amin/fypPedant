@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form method="post">        
+            {% for i,j in pairs %}
+            <div>
+                <label>{{ '{} vs {}'.format(i,j) }}</label>
+                <input type="text" name="value" value="{{value and value[loop.index0]}}" />
+            </div>
+            {% endfor %}
+
+            <input type="submit" />
+        </form>
+        
+        {% if value %}
+            <output>{{ value }}</output>
+        {% endif %}
+
+    </body>
+</html>

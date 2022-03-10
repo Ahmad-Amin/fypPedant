@@ -1,0 +1,13 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.sectionShadow{
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.footerSection{
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}

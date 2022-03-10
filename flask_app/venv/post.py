@@ -13,7 +13,7 @@ def index():
     
     x = 4
     pairs = combinations(range(1,x), 2)
-    return render_template('home.html', **locals())
+    return render_template('index.html', **locals())
 
 
 if __name__ == "__main__":
