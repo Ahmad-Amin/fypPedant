@@ -5,7 +5,7 @@ source venv/bin/activate
 !pip install Flask
 python -m flask --version
 python venv/hello.py
-export FLASK_APP=hello.py
+export FLASK_APP=controller.py
 export FLASK_ENV=development
 flask run
 

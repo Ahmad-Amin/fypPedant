@@ -1,151 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedent - a audiovisual autocorrector</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pedent - a audiovisual autocorrector</title>
 
-    <link rel="stylesheet" href="flask_app/venv/static/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+        
+        <style>
+            body{
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            
+            .sectionShadow{
+                box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            }
+            
+            .footerSection{
+                border-top-left-radius: 100%;
+                border-top-right-radius: 100%;
+            }
+            
+            .my-slider-progress {
+                background: #ccc;
+            }
+              
+            .my-slider-progress-bar {
+                background: rgb(47, 255, 127);
+                height: 3px;
+                transition: width 400ms ease;
+                width: 0;
+            }
+        </style>
+    </head>
+    <body class="overflow-y-hidden">
 
-    <div class="px-4">
-        <div class="h-96 w-full z-0">
-            <div class="bg-gradient-to-b from-white to-green-200 h-full w-full rounded-b-3xl text-center py-6">
-                <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
-                <p class="text-xl font-medium mt-16 text-neutral-600">Overview of Whole System</p>
-                <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
-            </div>
-        </div>
-    
-        <div class="-my-48 mx-auto flex flex-col justify-center items-center h-auto ">
-    
-            <!-- Record audio/video section (section 1) -->
-            <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow">
-    
-            </div>
-            <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Record your video or audio with your device</p>
-            <!-- -------------------------------- -->
-    
-            <div class="my-16">
-                <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                </svg>            
-            </div>
-    
-    
-            <!-- Upload audio/video section (section 2) -->
-            <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow">
-    
-            </div>
-            <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Upload your audio/video to our application</p>
-            <!-- -------------------------------- -->
-    
-    
-            <div class="my-16">
-                <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                </svg>            
-            </div>
-        </div>
-    
-        <div class="w-full h-auto bg-green-100 mt-48 py-20 rounded-3xl flex flex-col justify-center items-center">
-            <p class="font-medium text-lg leading-6 w-6/12 text-teal-600 mx-auto">Speech Recognition will convert all the audio part to extract english subtitles.
-                It will also identify all the mispronunciations you made, or text out of order.</p>
-    
-            <div class="my-10">
-                <svg width="420" height="308" viewBox="0 0 420 308" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 122.284H33.4004C37.5354 122.284 41.1057 125.179 41.9602 129.225L57.9302 204.833C59.9632 214.458 73.8789 213.921 75.1637 204.167L86.4452 118.531C87.8176 108.113 103.027 108.519 103.841 118.995L118.173 303.26C118.509 307.582 124.852 307.556 125.153 303.232L145.748 7.1075C146.199 0.617366 155.72 0.583432 156.218 7.07019L172.076 213.796C172.799 223.214 185.869 224.962 189.04 216.064L227.711 107.571C230.48 99.8028 241.784 100.862 243.062 109.009V109.009C244.386 117.447 256.276 118.12 258.587 109.897V109.897C260.85 101.845 272.414 102.245 274.075 110.442L275.193 115.96C276.624 123.024 286.629 123.273 288.41 116.288V116.288C290.291 108.906 301.039 109.759 301.733 117.345L315.131 263.774C316.092 274.284 331.395 274.417 332.54 263.926L346.151 139.225C347.249 129.162 361.712 128.69 363.465 138.66L371.139 182.327C372.932 192.531 387.839 191.701 388.487 181.36L391.677 130.486C391.966 125.875 395.789 122.284 400.409 122.284H418" stroke="#00B050" stroke-width="2.62461" stroke-linecap="round"/>
-                </svg>                    
-            </div>
-    
-            <div class="my-12">
-                <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                </svg>            
-            </div>
-        </div>
-    
-        <div class="-my-20  mx-auto flex flex-col justify-center items-center">
-            <div class="w-4/12  bg-white shadow-2xl p-9 rounded-2xl">
-                <p>Pedant is a web application providing its services  to regain control over your audio and video gestures. Whether its minding your pronunciation or adding dialogs you forgot, we have got you covered.</p>
-            </div>
-    
-            <div class="my-16">
-                <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                </svg>            
-            </div>
-    
-            <!-- Editable transcript Section section (section 3) -->
-            <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow">
-    
-            </div>
-            <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Your generated transcript will then be made editable. Edit where you made a mistake or add new sentences.</p>
-            <!-- -------------------------------- -->
-    
-            <div class="my-16">
-                <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                </svg>            
-            </div>
-    
-        </div>
-    
-        <div class="w-full h-auto bg-green-100 mt-48 pt-16 pb-8 rounded-3xl flex flex-col justify-center items-center">
-            <p class="font-medium text-lg leading-6 w-8/12 text-teal-600 mx-auto">Text-to-speech algorithms will tune your audio with respect to your changings.</p>
-    
-            <div class="mt-2">
-                <svg width="420" height="416" viewBox="0 0 420 416" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 186.785H33.4004C37.5354 186.785 41.1057 189.68 41.9602 193.726L57.9302 269.333C59.9632 278.958 73.8789 278.421 75.1637 268.668L86.4452 183.031C87.8176 172.614 103.027 173.019 103.841 183.495L118.173 367.761C118.509 372.083 124.852 372.057 125.153 367.732L145.748 71.608C146.199 65.1178 155.72 65.0839 156.218 71.5707L172.076 278.297C172.799 287.715 185.869 289.462 189.04 280.565L227.044 173.944C230.063 165.472 242.366 166.524 243.904 175.386L252.117 222.7C253.787 232.324 267.58 232.389 269.342 222.782L290.018 110.026C291.89 99.8168 306.824 100.787 307.36 111.152L317.455 306.404C318.011 317.155 333.721 317.603 334.889 306.901L346.151 203.725C347.249 193.663 361.712 193.191 363.465 203.16L371.139 246.827C372.932 257.032 387.839 256.201 388.487 245.861L391.677 194.986C391.966 190.376 395.789 186.785 400.409 186.785H418" stroke="#80ABA8" stroke-width="2.62461" stroke-linecap="round"/>
-                    <path d="M244 175L252.156 222.456C253.812 232.09 267.621 232.167 269.384 222.552L290.021 110.01C291.893 99.8008 306.826 100.77 307.363 111.135L317.5 307" stroke="#00B050" stroke-width="3.62" stroke-linecap="round"/>
-                </svg>                
-            </div>
-        </div>
-    
-        <div class=" flex flex-col justify-center items-center">
-            <div class="my-16">
-                <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round"/>
-                </svg>            
+        <!-- For loop data-splide='{"type":"loop"}' -->
+        <div class="splide" >
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="px-4">
+                            <div class="h-96 w-full z-0">
+                                <div class="bg-gradient-to-b from-white to-green-200 h-full w-full rounded-b-3xl text-center py-6">
+                                    <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
+                                    <p class="text-xl font-medium mt-12 text-neutral-600">Overview of Whole System</p>
+                                    <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
+                                </div>
+                            </div>
+                
+                            <div class="-my-48 mx-auto flex flex-col justify-center items-center h-auto ">
+                
+                                <!-- Record audio/video section (section 1) -->
+                                <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow"></div>
+                                <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Record your video or audio with your device</p>
+                                <!-- -------------------------------- -->
+                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="px-4">
+                            <div class="h-96 w-full z-0">
+                                <div class="bg-gradient-to-b from-white to-green-200 h-full w-full rounded-b-3xl text-center py-6">
+                                    <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
+                                    <p class="text-xl font-medium mt-12 text-neutral-600">Overview of Whole System</p>
+                                    <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
+                                </div>
+                            </div>
+                
+                            <div class="-my-48 mb-10 mx-auto flex flex-col justify-center items-center h-auto ">
+                
+                            <!-- Upload audio/video section (section 2) -->
+                                <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow"></div>
+                                <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Upload your audio/video to our application</p>
+                            <!-- -------------------------------- -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="px-4">
+                            <div class="w-full h-auto bg-green-100 py-6 rounded-3xl flex flex-col justify-center items-center">
+                                    <div class="text-center">
+                                        <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
+                                        <p class="text-xl font-medium mt-12 text-neutral-600">Overview of Whole System</p>
+                                        <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
+                                    </div>
+                                <p class="font-medium text-lg leading-6 w-6/12 text-teal-600 mx-auto mt-8">Speech
+                                    Recognition will convert all the audio part to extract english subtitles. It
+                                    will also identify all the mispronunciations you made, or text out of order.</p>
+                            
+                                <div class="flex flex-row justify-center items-center gap-16">
+                                    <div class="my-10">
+                                        <svg width="420" height="308" viewBox="0 0 420 308" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2 122.284H33.4004C37.5354 122.284 41.1057 125.179 41.9602 129.225L57.9302 204.833C59.9632 214.458 73.8789 213.921 75.1637 204.167L86.4452 118.531C87.8176 108.113 103.027 108.519 103.841 118.995L118.173 303.26C118.509 307.582 124.852 307.556 125.153 303.232L145.748 7.1075C146.199 0.617366 155.72 0.583432 156.218 7.07019L172.076 213.796C172.799 223.214 185.869 224.962 189.04 216.064L227.711 107.571C230.48 99.8028 241.784 100.862 243.062 109.009V109.009C244.386 117.447 256.276 118.12 258.587 109.897V109.897C260.85 101.845 272.414 102.245 274.075 110.442L275.193 115.96C276.624 123.024 286.629 123.273 288.41 116.288V116.288C290.291 108.906 301.039 109.759 301.733 117.345L315.131 263.774C316.092 274.284 331.395 274.417 332.54 263.926L346.151 139.225C347.249 129.162 361.712 128.69 363.465 138.66L371.139 182.327C372.932 192.531 387.839 191.701 388.487 181.36L391.677 130.486C391.966 125.875 395.789 122.284 400.409 122.284H418"
+                                                stroke="#00B050" stroke-width="2.62461" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                
+                                    <div class="my-12 -rotate-90">
+                                        <svg width="34" height="60" viewBox="0 0 34 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 3L17 17L31 3" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round" />
+                                            <path d="M3 22L17 36L31 22" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round" />
+                                            <path d="M3 41L17 55L31 41" stroke="#CEDBCD" stroke-width="6" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="w-4/12  bg-white shadow-2xl p-9 rounded-2xl">
+                                        <p>Pedant is a web application providing its services to regain control over
+                                            your audio and video gestures. Whether its minding your pronunciation or adding
+                                            dialogs you forgot, we have got you covered.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="px-4">
+                            <div class="h-96 w-full z-0">
+                                <div class="bg-gradient-to-b from-white to-green-200 h-full w-full rounded-b-3xl text-center py-6">
+                                    <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
+                                    <p class="text-xl font-medium mt-12 text-neutral-600">Overview of Whole System</p>
+                                    <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
+                                </div>
+                            </div>
+                
+                            <div class="-my-48 mb-10 mx-auto flex flex-col justify-center items-center h-auto ">
+                
+                                <!-- Editable transcript Section section (section 3) -->
+                                <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow"></div>
+                                <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Your
+                                    generated transcript will then be made editable. Edit where you made a mistake
+                                    or add new sentences.</p>
+                                <!-- -------------------------------- -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="px-4">
+                            <div class="w-full h-auto bg-green-100 py-6 rounded-3xl flex flex-col justify-center items-center">
+                                <div class="text-center">
+                                    <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
+                                    <p class="text-xl font-medium mt-12 text-neutral-600">Overview of Whole System</p>
+                                    <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
+                                </div>
+                                <p class="font-medium text-lg leading-6 w-8/12 text-teal-600 mx-auto mt-8 text-center">Text-to-speech algorithms will tune your audio
+                                    with respect to your changings.</p>
+                            
+                                <div class="mt-2">
+                                    <svg width="420" height="416" viewBox="0 0 420 416" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 186.785H33.4004C37.5354 186.785 41.1057 189.68 41.9602 193.726L57.9302 269.333C59.9632 278.958 73.8789 278.421 75.1637 268.668L86.4452 183.031C87.8176 172.614 103.027 173.019 103.841 183.495L118.173 367.761C118.509 372.083 124.852 372.057 125.153 367.732L145.748 71.608C146.199 65.1178 155.72 65.0839 156.218 71.5707L172.076 278.297C172.799 287.715 185.869 289.462 189.04 280.565L227.044 173.944C230.063 165.472 242.366 166.524 243.904 175.386L252.117 222.7C253.787 232.324 267.58 232.389 269.342 222.782L290.018 110.026C291.89 99.8168 306.824 100.787 307.36 111.152L317.455 306.404C318.011 317.155 333.721 317.603 334.889 306.901L346.151 203.725C347.249 193.663 361.712 193.191 363.465 203.16L371.139 246.827C372.932 257.032 387.839 256.201 388.487 245.861L391.677 194.986C391.966 190.376 395.789 186.785 400.409 186.785H418"
+                                            stroke="#80ABA8" stroke-width="2.62461" stroke-linecap="round" />
+                                        <path
+                                            d="M244 175L252.156 222.456C253.812 232.09 267.621 232.167 269.384 222.552L290.021 110.01C291.893 99.8008 306.826 100.77 307.363 111.135L317.5 307"
+                                            stroke="#00B050" stroke-width="3.62" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="px-4">
+                            <div class="h-96 w-full z-0">
+                                <div class="bg-gradient-to-b from-white to-green-200 h-full w-full rounded-b-3xl text-center py-6">
+                                    <h2 class="text-green-600 text-2xl text-bold font-medium">Pedent - An audiovisual autocorrector</h2>
+                                    <p class="text-xl font-medium mt-12 text-neutral-600">Overview of Whole System</p>
+                                    <div class="bg-green-300 w-48 h-0.5 mx-auto rounded mt-3"></div>
+                                </div>
+                            </div>
+                
+                            <div class="-my-48 mb-10 mx-auto flex flex-col justify-center items-center h-auto ">
+                
+                                <!-- video Download section (section 4) -->
+                                <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow"></div>
+                                <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Video/audio will be ready to download with all the respective changes</p>
+                                <!-- -------------------------------- -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">Slide 07</li>
+                </ul>
             </div>
         
-            <!-- Editable transcript Section section (section 3) -->
-            <div class="w-7/12 h-96 rounded-3xl bg-white mx-auto sectionShadow">
-        
+            <!-- Add the progress bar element -->
+            <div class="my-slider-progress">
+                <div class="my-slider-progress-bar"></div>
             </div>
-            <p class="w-7/12 mx-auto mt-4 pl-2 text-lg text-teal-600 font-medium leading-6">Video/audio will be ready to download with all the respective changes</p>
-            <!-- -------------------------------- -->
         </div>
-    </div>
 
-    <footer class="mt-36 h-36 overflow-hidden">
-        <div class="bg-green-300 footerSection w-full h-64 ">
-            <div class=" flex flex-col items-center justify-start pt-10 text-2xl font-bold text-teal-600">
-                <p>Pedant</p>
-                <p>An audiovisual autocorrector</p>
+        <!-- <footer class="mt-36 h-36 overflow-hidden">
+            <div class="bg-green-300 footerSection w-full h-64 ">
+                <div
+                    class=" flex flex-col items-center justify-start pt-10 text-2xl font-bold text-teal-600">
+                    <p>Pedant</p>
+                    <p>An audiovisual autocorrector</p>
+                </div>
             </div>
-        </div>
-    </footer>
-    
-    
-</body>
+        </footer> -->
+
+    <script>
+        var splide = new Splide( '.splide' );
+        var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
+        
+        // Update the bar width:
+        splide.on( 'mounted move', function () {
+            var end = splide.Components.Controller.getEnd() + 1;
+            bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
+        } );
+        
+        splide.mount();
+    </script>
+    </body>
+
 </html>
